@@ -103,9 +103,9 @@ header{
   }
   .navbar--menu li{
     text-align: center;
-    width: 100vw;
-    
+    width: 100vw; 
   }
+  
   .navbar--menu li a{
     border-radius: 0;
   }
