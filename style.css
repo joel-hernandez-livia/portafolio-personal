@@ -36,7 +36,10 @@ header{
   padding: 0 40px;
   /* background-color: rgba(19,19,28,.8); */
 }
-
+.header-transparent{
+  background-color: transparent;
+  transition: background-color 0.5s;
+}
 .logo{
   line-height: 80px;
   font-size: var(--l);
