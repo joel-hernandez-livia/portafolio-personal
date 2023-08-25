@@ -28,6 +28,7 @@ h2{
 
 header{
   position: fixed;
+  z-index: 10;
   display: flex;
   width: 100%;
   height: 80px;
@@ -46,7 +47,6 @@ header{
   color: white;
   margin: 0 20px;
 }
-
 .bars{
   display: none; 
 }
@@ -70,6 +70,9 @@ header{
 }
 
 @media (max-width:768px) {
+  .header-transparent{
+    background-color:rgba(19,19,28,.9); 
+  }
   .bars{
     display: block;
     cursor: pointer;
@@ -121,7 +124,7 @@ header{
   background-position: center;
 }
 .hero--container{
-  /* width: 90vw; */
+  padding: 30px;
   height: 100vh;
   padding-top: 80px;
   display: flex;
@@ -151,26 +154,30 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
-.photo-perfil-container img{
-  width: 92%;
-  height: 92%;
-  border-radius: 100%;
-}
+
 .fadein-title{
   opacity: 0;
   animation: fadeInAnimation 2s forwards;
   animation-delay: 0.2s;
+  text-align: center;
 }
 .fadein-paragraph{
   opacity: 0;
   animation: fadeInAnimation 2s forwards;
   animation-delay: 0.4s;
+  text-align: center;
 }
 .fadein-photo{
   opacity: 0;
   animation: fadeInAnimation 2.4s forwards;
   animation-delay: 0.8s;
+}
+.photo-perfil-container img{
+  width: 92%;
+  height: 92%;
+  border-radius: 100%;
 }
 @keyframes fadeInAnimation {
   to{
@@ -183,7 +190,7 @@ header{
 .about{
   display: flex;
   justify-content: center;
-  padding-bottom: 60px;
+  padding: 60px 0;
 }
 .about--container{
   background-color: white;
@@ -209,18 +216,30 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0 60px 0;
+  padding: 80px 0 0 0;
 }
 
 .skills h2{
   color: white;
 }
 .skills--icons{
-  padding: 80px 0;
+  padding: 70px 0;
   display: flex;
   justify-content: space-evenly;
-  width: 70%;
+  width: 78%;
   max-width: 992px;
+}
+.skills--icons__item{
+  text-align: center;
+}
+.skills--icons__item p{
+  color: white;
+  font-size: var(--m);
+  padding-top: 24px;
+  transition: color 0.5s;
+}
+.skills--icons__item p:hover{
+  color: #8b2314;
 }
 .fa-brands{
   color: white;
@@ -234,7 +253,14 @@ header{
   background-color: #efbc24;
   transform: scale(130%);
 }
-
+@media (max-width:768px) {
+  .skills--icons{
+    width: 90%;
+  }
+  .skills--icons__item p{
+    display: none;
+  }
+}
 /* --- PROJECTS --- */
 
 .projects{
@@ -242,20 +268,21 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 100px;
+  padding: 60px 0;
 }
 .projects h2{
   color: rgb(255, 255, 255);
 }
 .projects--container{
-  padding: 40px 0;
+  padding: 60px 0;
   display: flex;
   justify-content: space-around;
   width: 80%;
   max-width: 992px;
 }
 .card-project{
-  width: 35%;
+  width: 340px;
+  padding-bottom: 20px;
 }
 
 .image-project img{
@@ -273,12 +300,20 @@ header{
 .card-project p{
   color: white;
   font-size: var(--s);
+  line-height: 170%;
 }
 .card-project a{
   display: inline-block;
   padding: 20px 0;
   color: white;
-  font-size: var(--m);
+  font-size: 20px;
+}
+
+@media (max-width:992px) {
+  .projects--container{
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* --- CONTACT --- */
@@ -291,8 +326,8 @@ header{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 100px;
+  padding: 100px 0;
+  
 }
 .contact h2{
   color: white;
@@ -309,13 +344,24 @@ header{
   width: 40%;
   max-width: 992px;
 }
+@media (max-width:900px) {
+  .contact--icons{
+    width: 50%;
+  }
+  @media (max-width:680px) {
+    .contact--icons{
+      width: 65%;
+    }
+}
+
+}
 /* --- FOOTER --- */
 
 footer{
   background-color: rgb(19, 19, 28);
   display: flex;
   justify-content: center;
-  padding: 18px 0;
+  padding: 24px 0;
   color: white;
   font-size: var(--s);
 }
