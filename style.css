@@ -50,7 +50,9 @@ header{
 .navbar .navbar--menu{
   display: flex;
 }
-
+.navbar--menu li{
+  margin: 0 20px;
+}
 .navbar--menu li a{
   display: block;
   text-transform: uppercase;
@@ -279,8 +281,9 @@ header{
 /* --- CONTACT --- */
 
 .contact{
-  background:linear-gradient(rgba(19, 19, 28,.95),rgba(19, 19, 28,.95)),url("./img/img4.jpg") ;
+  background:linear-gradient(rgba(19, 19, 28,.9),rgba(19, 19, 28,.9)),url("./img/img4.jpg") ;
   background-size: cover;
+  background-position: center; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -306,10 +309,10 @@ header{
 /* --- FOOTER --- */
 
 footer{
-  background-color: #0e141d;
+  background-color: rgb(19, 19, 28);
   display: flex;
   justify-content: center;
-  padding: 15px 0;
+  padding: 18px 0;
   color: white;
   font-size: var(--s);
 }
