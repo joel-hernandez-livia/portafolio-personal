@@ -1,0 +1,123 @@
+/* ----- ESTILOS GENERALES DEL BLOG ----- */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+}
+html{
+  font-size: 62.5%;
+}
+:root{
+  --s:1.6rem;
+  --m:2.2rem;
+  --l:3.8rem;
+  --xl:6rem; 
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f8f8f8; /* Fondo del blog */
+  color: #333; /* Color del texto */
+  line-height: 1.6;
+}
+
+/* ----- HEADER DEL BLOG ----- */
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: var(--xl);
+}
+
+/* ----- MAIN DEL BLOG ----- */
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ----- ARTÍCULOS DEL BLOG ----- */
+
+article {
+  margin-bottom: 40px;
+
+}
+.h2{
+  font-size: var(--l);
+}
+.p{
+  font-size: var(--m);
+}
+article h2 {
+  color: #333;
+}
+
+article p {
+  color: #555;
+ 
+}
+
+/* ----- FORMULARIO DE CONTACTO DEL BLOG ----- */
+
+#contacto {
+  margin-top: 40px;
+}
+
+#formulario-contacto {
+  display: grid;
+  grid-gap: 10px;
+}
+
+#formulario-contacto label {
+  color: #333;
+}
+
+#formulario-contacto input,
+#formulario-contacto textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#formulario-contacto button {
+  background-color: #8b2314;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#formulario-contacto button:hover {
+  background-color: #5c140d;
+}
+
+/* ----- FOOTER DEL BLOG ----- */
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Puedes agregar más estilos según tus necesidades */
+
+
+@media (max-width:992px) {
+  :root{
+  --s:1.1rem;
+  --m:1.6rem;
+  --l:2.8rem;
+  --xl:4.8rem; 
+}
